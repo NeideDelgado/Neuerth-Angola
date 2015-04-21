@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title> | Profiler</title>
+    <meta name="author" content="ITELnet - Comunicações & Serviços, S.A.">
+    <meta name="keywords" content="">
+    <meta name="description" content="Profiler Angola">
+    <link href='/favicon.ico' rel='icon' type='image/x-icon'>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+	<link href="/assets/prettyPhoto.css" media="screen" rel="stylesheet" type="text/css" />
+  	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/base/base-min.css">
+  	<link rel="stylesheet" type="text/css" media="screen" href="/assets/global.css">
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+	          		<div class="menu" style="padding-left:230px;">
+	          			<div class="dark_menu men sixteen columns">
+		                		<div id="menu" >
+				                    <ul>
+				                        <li>
+				                        	<%= link_to 'Home', new_idea_path %>
+				                        </li>
+				                        <li>
+			                               <%= link_to 'Criação do C.V', new_idea_path %>
+				                        </li>
+				                        <li>
+			                                <%= link_to 'Modelo do C.V', new_idea_path %>	
+				                            <div>
+				                                <ul>
+				                                    <li>
+				                                       <%= link_to 'Modelo Final do C.V', new_idea_path %>
+				                                    </li>
+				                                    <li>
+				                                        <%= link_to 'Modelo Individual do C.V', new_idea_path %>
+				                                    </li> 
+				                                </ul>
+				                            </div>	
+				                        </li>
+				                        <li>
+			                                <%= link_to 'Preçario', new_idea_path %>
+				                        </li>
+				                        <li>
+			                               <%= link_to 'FAQ', new_idea_path %>
+				                        </li>
+				                        <li>
+				                           <%= link_to 'Contactos', new_idea_path %>
+				                        </li>
+				                    </ul>
+				                </div>
+			                    <select id="select_menu" onchange="location = this.value">
+			                        <option value="">Select the page</option>
+			                        <option value="">Home</option>
+			                        <option value="">Criação do C.V</option>
+			                        <option value="">Modelo do C.V</option>
+			                            <option value="">Modelo Final do C.V</option>
+			                            <option value="">Modelo Individual do C.V</option>
+			                        <option value="">Preçario</option>
+			                        <option value="">FAQ</option>
+			                        <option value="">Contactos</option>
+			                    </select>
+			             
+					
+	    	</div>
+		</div>
+
+		<div class="container">
+		  <%= yield %>
+		</div>
+
+        <footer><!-- Rodapé -->
+            <div id="footer" >
+               	<div class="clear"></div>
+           		<div class="footer_btm">
+                	<div class="footer_bt container">
+                        <div class="footer_btm_inner ">
+                              	
+                         </div>	
+                         <h8>&nbsp; © 2014 <%= link_to 'Developed by , ITELnet - Comunicações & Serviços, S.A. ', 'http://www.itelnet.co.ao/' %>
+                         </h8>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- fim rodapé -->
+    </div>
+</body>
+</html>
